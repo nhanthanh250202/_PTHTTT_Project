@@ -1,0 +1,71 @@
+body{
+    width: max-content;
+    height: max-content;
+}
+img{
+    position: relative;
+    width: calc(var(--width)/7);
+    height: calc(var(--width)/7);
+    object-fit: cover;
+    align-self: center;
+}
+
+
+.print-section{
+    --width:400px;
+    font-size: calc(var(--width)/30);
+    gap: calc(var(--width)/30) ;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-top: 10px;
+    background-color: #f2f2f2;
+    width: var(--width);
+    height: max-content;
+}
+span{
+    width: var(--width);
+    justify-content: space-around;
+    display: flex;
+    margin-bottom: calc(var(--width)/30);
+}
+h3 {
+    font-size: calc(var(--width)/20);
+    text-align: center;
+}
+.print-section h1{
+    font-size: calc(var(--width)/10);
+    font-family: Geomanist-Bold;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-bottom: calc(var(--width)/30);
+}
+.print-section h2{
+    text-align: center;
+    font-size: calc(var(--width)/30);
+    
+}
+.print-section table thead td{
+    border-top: 2px solid #8e8e8e;
+}
+.print-section table tbody td{
+    padding: calc(var(--width)/30);
+}
+.print-section table tfoot td{
+    padding-top: calc(var(--width)/30);
+    text-align: right;
+    border-top: 2px solid #8e8e8e;
+}
+
+
+.bottom-print span{
+    justify-content: space-between;
+    align-items: center;
+    width: var(--width);
+    height: calc(var(--width)/15);
+    display: flex;
+}
+.bottom-print span h3{
+    align-self: center;
+}

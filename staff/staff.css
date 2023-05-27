@@ -1,0 +1,335 @@
+error{
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.form-val form{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+	animation: text-focus-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+.topbar ul{
+    animation: none;
+}
+
+.form-val h {
+    font-family: Geomanist-Bold;
+    color: #d0aa6f;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5em;
+}
+.form-group{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.form-group i{
+    margin-right: 0.5vw;
+}
+.form-group label{
+    width: 8vw;
+}
+.form-group input,.form-group select{
+    background: transparent;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid #d0aa6f;
+    height: 4vh;
+    width: 15vw;
+}
+.form-group input:focus{
+    outline: none;
+    border-bottom: 2px solid #6f74d0;
+    background: #f1f1f1;
+    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.submit-button{
+    margin-top: 3%;
+    align-self: center;
+}
+.submit-button label{
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px 10px ;
+    border-radius: 3px;
+    background-color: #d0aa6f;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.submit-button label:hover{
+    color: aliceblue;
+    border-radius: 20px;
+    padding: 10px 20px ;
+    /* background-color: #836fd0; */
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.annouform{
+    position: absolute;
+    z-index: 99;
+}
+.annoubox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width:  max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid #b01c0b;
+    background-color: #ffffff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px #00131b26;
+}
+
+.annouform::before{
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    top: -200%;
+    left: -150%;
+    background: #22222222;
+    backdrop-filter: blur(2px);
+}
+
+.annoubox h1{
+    animation: none;
+    color: #222;
+}
+.annoubox h2{
+    text-align: center;
+    margin:  20px 0;
+    text-transform: none;
+    color: #ff6200;
+}
+.annoubox  a{
+    padding: 10px 30px;
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    color: var(--text-color);
+    background: #e6bb1d;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+.annoubox  a:hover
+{
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+/* RENDER TABLE */
+.render-section {
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    height: 100%;
+    display: block;
+    justify-content: start;
+    background-color: #ffffff;
+}
+
+
+
+.render-section table{
+    margin-top: 20px;
+    line-height: 150%;
+    padding: 30px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: small;
+}
+
+.render-section table td, .render-section table th{
+    padding: 0 10px;
+}
+.render-section h1{
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: center;
+    animation:tracking-in-expand 0.7s 0.7s cubic-bezier(.25,.46,.45,.94) both;
+}
+#myTable ::-webkit-scrollbar{
+    background: transparent;
+    width: 7px;
+}
+#myTable ::-webkit-scrollbar-thumb{
+    background-color: #ffe279;
+    border-radius: 3px;
+}
+
+#myTable ::-webkit-scrollbar-button{
+    height: 10px;
+}
+
+#myTable table{
+    table-layout: fixed;
+}
+
+#myTable a,#myTable a:visited{
+    color: #00131b;
+}
+#myTable thead {
+    background: #f9f9f9;
+    display: table;
+    width: calc(100% - 7px);
+}
+
+#myTable tbody {
+    height: 35vh;
+    overflow: auto;
+    overflow-x: hidden;
+    display: block;
+    table-layout: fixed;
+    width: 100%;
+}
+
+
+#myTable thead tr{   
+    border-bottom: 2px solid #ffcc42e8;
+    background-color: #ffe0a3;
+    height: 60px;
+}
+#myTable td{
+   
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}   
+
+#myTable tbody tr{
+    position: relative;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+    height: 50px;
+}
+
+#myTable tbody tr:hover, #myTable tbody tr:nth-child(even):hover{
+    background-color: #fff2c384;
+}
+#myTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2bc;
+}
+#myTable tbody tr:nth-child(odd){
+    background-color: #ffffff;
+}
+
+#myTable tbody tr{
+    animation: fadeIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+.delform{
+    position: absolute;
+    left: 35%;
+    top: 35%;
+}
+.delbox{
+    z-index: 99;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width:  max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid #b01c0b;
+    background-color: #ffffff;
+    padding: 30px 80px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 15px #00131b26;
+}
+
+.delform::before{
+    z-index: 98;
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    top: -160%;
+    left: -140%;
+    background: #22222222;
+    backdrop-filter: blur(2px);
+}
+
+.delbox h1{
+    animation: none;
+    color: #222;
+}
+.delbox h2{
+    text-align: center;
+    margin:  20px 0;
+    text-transform: none;
+    color: #ff6200;
+}
+.delbox  a{
+    padding: 10px 30px;
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    color: var(--text-color);
+    background: #e6bb1d;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+.delbox  a:hover
+{
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388; 
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    padding: 3% 5%;
+    width: 60vw;
+    min-height: 57vh;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px #04073f13;
+}
+tab{
+    width: 60vw;
+    height: 57vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch-view-btn{
+    animation: text-focus-in 2s cubic-bezier(0.19, 1, 0.22, 1);
+}

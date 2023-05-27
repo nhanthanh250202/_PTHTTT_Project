@@ -1,0 +1,64 @@
+
+.render-section {
+    align-self: flex-start;
+    height: inherit;
+    background-color: transparent;
+}
+#myTable tbody{
+    height: 40vh;
+}
+.switch-view-btn{
+    top: 50%;
+    right: 16%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.switch-view-btn label{
+    font-size: larger;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(235, 173, 78);
+    border-radius: 100%;
+    padding: 10px 11px;
+    height: 20px;
+    width:20px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.switch-view-btn:hover label{
+    color: white;
+    background-color: rgb(78, 143, 235);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.switch-view-btn:hover button{
+    display: block;
+    opacity: 1;
+}
+.switch-view-btn button{
+    z-index: 99;
+    top: -80%;
+    position: absolute;
+    width: max-content;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #0b0b0b;
+    border: none;
+    background: rgba(78, 143, 235, 0.425);
+    cursor: pointer;
+    padding: 5px 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity  1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

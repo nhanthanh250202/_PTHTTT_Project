@@ -1,0 +1,52 @@
+
+.function{
+    position: relative;
+    transition: scale 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: slide-in-bottom 1.3s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+}
+.function:nth-child(odd){
+    animation: slide-in-top 1.3s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+
+}
+
+.function img{
+    filter: grayscale(1);
+    border-radius: 10px;
+    height: 40vh;
+    width: 15vw;
+    object-fit: cover;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+} 
+
+.function-text{
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    background: linear-gradient(#ffffff00,#d0aa6f);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+.function-text a{
+    margin-bottom: 10%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-align: center;
+    color: #ffffff ;
+}
+.function:hover{
+    
+    scale: 1.1;
+    transition: scale 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.function:hover img{
+    filter: grayscale(0);
+}
+
+

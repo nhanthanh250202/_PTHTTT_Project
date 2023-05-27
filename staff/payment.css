@@ -1,0 +1,116 @@
+
+.content{
+    margin-top: 70px;
+    width: 80vw;
+    height: 70vh;
+    padding: 20px 20px;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+#payment{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+.service-table{
+    width: 40vw;
+}
+.top{
+    width: 30vw;
+}
+.form-group{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    color: #262626;
+    font-size: 1em;
+    width: 30vw;
+}
+.top input[type=text]{
+    text-align: center;
+    width: 100%;
+    border: none;
+    color: rgb(102, 0, 0);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.top select{
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-weight: 1.2em;
+}
+.bottom h1{
+    margin: 5px 0 10px 0;
+}
+.bottom{
+    margin-top: 30px;
+}
+.bottom .group{
+    gap: 50px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #9b9b9b;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.discount-total h1{
+    color: rgb(201, 4, 4);
+}
+.total-group h1{
+    color: rgb(0, 119, 28);
+}
+.total_bill_text h1{
+    font-size: 1.5em;
+    
+}
+
+#tab-2 #myTable thead th{
+    background-color: rgb(255, 245, 111);
+}
+#tab-2 #myTable tr td{
+    cursor: pointer;
+}
+tr.highlight  td{
+    background: #dfffcb;
+} 
+.service-selector{
+    display: none;
+}
+.service-selector:checked{
+    display: inline;
+}
+.amount-input{
+    text-align: center;
+    height: 35px;
+    border: none;
+    width: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid #262626;
+}
+.amount-input:focus{
+    outline: none;
+}
+label#submit-label{
+    cursor: pointer;
+    right: 47%;
+    background-color: #4ebeff;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    box-shadow: 5px 5px #004066;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+label#submit-label:hover{
+    background-color: #57ff4e;
+    box-shadow: 2px 2px #00660c;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.annouform::before{
+    left: -200%;
+}

@@ -1,0 +1,325 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display&family=Poppins:wght@400;600&family=Quicksand:wght@300;400;600&family=Wix+Madefor+Display&display=swap');
+
+@font-face {
+    font-family: Baemin;
+    src: url(font/BMFont.ttf);
+}
+@font-face {
+    font-family: Geomanist-Bold;
+    src: url(font/Geomanist-Bold.otf);
+}
+@font-face {
+    font-family: Geomanist;
+    src: url(font/Geomanist.otf);
+}
+@font-face {
+    font-family: Phudu;
+    src: url(font/DTPhudu-Bold.otf);
+}
+@font-face {
+    font-family: Cheris;
+    src: url(../font/SVN-Cherish\ Moment.otf);
+}
+
+:root{
+    --bg-color: #f6f6f6;
+    --text-color: #fdfdfd;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Geomanist, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vw;
+    overflow: hidden;
+    background: var(--bg-color);
+    
+}
+
+.loading{
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(img/loading-bg.png);
+    background-size: auto 100%;
+    background-position: 50%;
+    
+}
+.loading img{
+    margin-bottom: 5%;
+    width: 25vw;
+}
+.loading h{
+    left: calc(100% -30%);
+    top: 30%;
+    text-align: center;
+    z-index: 0;
+    position: absolute;
+    font-size: 50vh;
+    font-family: Geomanist-Bold;
+    letter-spacing: 3rem;
+    color: #d0a96f14 ;
+}
+.loading h1{
+    font-size: 2vw;
+    letter-spacing: 10px;
+    color: #d0aa6f ;
+}
+
+
+.login-form{
+
+    user-select: none;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url(img/loading-bg.png);
+    background-size: auto 100%;
+    background-position: 50%;
+}
+.login-form h{
+    left: calc(100% -30%);
+    top: calc(50% - 10%);
+    text-align: start;
+    z-index: 0;
+    position: absolute;
+    font-size: 20vh;
+    font-family: Geomanist-Bold;
+    letter-spacing: 1rem;
+    color: #d0a96f14 ;
+} 
+.login-form h1{
+    top: 10%;
+    left: calc(100% -50%);
+    position: absolute;
+    font-size: 1vw;
+    letter-spacing: 10px;
+    color: #d0aa6f ;
+}
+.form-box{
+    display: flex;
+    position: relative;
+    border: 2px solid #ffffff81;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    animation: text-focus-in 0.4s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+.form-box h2{
+    letter-spacing: 3px;
+    font-size: 2em;
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.inputbox{
+    position: relative;
+    margin: 40px 0;
+    width: 310px;
+    border-bottom: 2px solid #ffff;
+
+}
+.inputbox label{
+    font-family: Geomanist-Bold;
+    color: var(--text-color);
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #dbb474;
+}
+.inputbox i {
+    color: var(--text-color);
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+#password-btn{
+    cursor: pointer;
+}
+
+ input[type = submit]{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2em;
+    border: 1px solid var(--text-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    background: transparent;
+    transition: 0.4s linear;
+    cursor: pointer;
+}
+ input[type = submit]:hover{
+    color: var(--text-color);
+    border:none;
+    background: linear-gradient(35deg,#dbb474,#b86e74);
+    transition: 0.4s linear;
+}
+
+
+.topbar{
+    position: fixed;
+    z-index: 90;
+    width: 70vw;
+    padding: 4% 15% 2% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.topbar img{
+    width: 30px;
+}
+.topbar ul{
+    animation: scale-up-hor-center 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    display: flex;
+    gap: 50px;
+}
+.topbar a{
+    position: relative;
+    width: fit-content;
+    color: black;
+    cursor: pointer;
+}
+
+.topbar ul li a:hover::after , a.active::after{
+    border-radius: 3px 3px 0 0;
+    position: absolute;
+    left: -10%;
+    bottom: -50%;
+    content: "";
+    background-color: #d0aa6f ;
+    width: 120%;
+    height: 4px;
+    animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.topbar h1{
+    user-select: none;
+    display: block;
+    font-family: Geomanist-Bold;
+    font-size: 25px;
+    rotate: -90deg;
+}
+
+.topbar .btn-menu{
+    scale: 0.5;
+}
+.hidden-menu a{
+    width: 120px;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+.hidden-menu a:hover{
+    background-color: #e0bd87 ;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#checkbox:checked ~ .hidden-menu {display: flex;}
+.hidden-menu {
+
+    flex-direction: column;
+    display: none;
+    justify-content: center;
+    scale: 1.9;
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-radius: 5px;
+    padding: 10px 10px;
+    position: absolute;
+    bottom: -300%;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+section.body{
+    position: relative;
+    gap: 5%;
+    flex-direction: column;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.body h1{
+    text-transform: uppercase;
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1vw;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.body b{
+    font-size: 2em;
+    color: #d0aa6f ;
+}
+.subtitle{
+    z-index: -2;
+    rotate: -90deg;
+    height: 95vw;
+    width: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.tracking-in-expand {
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+h1.side-text{
+    letter-spacing: 10px;
+}
+
+h1.timer{
+    letter-spacing: 30px;
+    rotate: 180deg;
+}
+.container{
+    gap: 5%;
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+}

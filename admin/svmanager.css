@@ -1,0 +1,117 @@
+
+.render-section {
+    align-self: flex-start;
+    height: inherit;
+    background-color: transparent;
+}
+#myTable tbody{
+    height: 25vh;
+}
+.form-val{
+    padding: 5% 5%;
+    border-radius: 10px;
+}
+.switch-btn-group{
+    bottom: 5%;
+    left: calc(50%-15%);
+    z-index: 80;
+    position: absolute;
+    display: flex;
+    gap: 20px;
+}
+
+.switch-btn-group div{
+    
+    width: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    background-color: #3d7fcb;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.switch-btn-group div:hover{
+    width: 12vw;
+}
+.switch-btn-group div:hover button{
+    opacity: 1;
+    display: block;
+}
+.switch-btn-group div button{
+    overflow: hidden;
+    height: 1vw;
+    display: none;
+    opacity: 0;
+    width: 12vw;
+    font-size: 1em;
+    margin-right: 10px;
+    color: #f1f1f1;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: opacity 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+div.active-tab-btn{
+    background-color: #101578;
+    width: 12vw;
+}
+div.active-tab-btn button{
+    display: block;
+    opacity: 1;
+}
+.switch-view-btn{
+    right: 18%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.switch-view-btn label{
+    font-size: larger;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(235, 173, 78);
+    border-radius: 100%;
+    padding: 10px 11px;
+    height: 20px;
+    width:20px;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.switch-view-btn:hover label{
+    color: white;
+    background-color: rgb(78, 143, 235);
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.switch-view-btn:hover button{
+    display: block;
+    opacity: 1;
+}
+.switch-view-btn button{
+    top: -80%;
+    position: absolute;
+    width: max-content;
+    overflow: hidden;
+    border-radius: 10px;
+    color: #0b0b0b;
+    border: none;
+    background: rgba(78, 143, 235, 0.425);
+    cursor: pointer;
+    padding: 5px 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity  1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

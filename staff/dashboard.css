@@ -1,0 +1,76 @@
+.content{
+    background-color: transparent;
+    box-shadow: none;
+    gap: 30px;
+
+}
+.form-val{
+    border-radius: 30px;
+    padding: 60px 60px;
+    background-color: #ffff;
+}
+.preor-group{
+    border-radius: 30px;
+    padding: 50px 75px;
+    box-shadow: 3px 3px 10px #00447268;
+    background: #ffffff;
+    animation: text-focus-in 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+.box-unchecked{
+    box-shadow: 5px 5px 0px #004572;
+    border: 5px solid #c7e9ff;
+    color: aliceblue;
+    cursor: pointer;
+    background: cornflowerblue;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.box-checked,.box-unchecked:hover{
+    background: rgb(237, 189, 100);
+    border: 5px solid #ffe8c7;
+    box-shadow: 3px 3px 0px #723500;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.popping{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    --height: 120vh;
+    --width: 110vw;
+    height: var(--height);
+    width: var(--width);    
+    top: -40vh;
+    left: -30vw;
+    position: absolute;
+    background: #0033553b;
+    z-index: 99;
+}
+.popping #input-checkbox{
+    top: -4%;
+    right: -3%;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    box-shadow: none;
+    background: #7e1100;
+    border: none;
+}
+.popping h1{
+    margin-bottom: 10px;
+}
+#refresh{
+    cursor: pointer;
+    width: fit-content;
+}
+#refresh:hover{
+    color: #ffa386;
+    transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.render-section{
+    z-index:-1;
+}
